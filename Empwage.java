@@ -1,4 +1,4 @@
-//UseCase 7=> Refactor code to compute Employee Wage
+//UseCase 8=> Compute wage for multiple companies
 
 class Empwage {
 

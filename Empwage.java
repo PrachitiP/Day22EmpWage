@@ -1,27 +1,37 @@
-//UseCase 4=>using Swirch case
+//UseCase 5=>Calculate wage for month
  
 class Empwage {
 
 	public static final int isFullTime = 1;
 	public static final int isPartTime = 2;
 	public static final int wagePerHour = 20;
-
+	public static final int workDayPerMonth = 20;
+	
 	public static void main(String[] args){
+	
 		int workHour = 0;
+		int monthWage = 0;
 
-		int check = (int)(Math.random()*3)+1;
+		for(int i=1;i<=workDayPerMonth;i++){
+		
+			int check = (int)(Math.random()*3)+1;
 
-		if(check == 1){
+			switch(check){
+				case isFullTime:
+					workHour = 8;
+					break;
 
-			workHour = 8;
+				case isPartTime:
+					workHour = 4;
+					break;
+				default:
+					workHour = 0;
+					break;
+			}
+			int dailyWage = workHour * wagePerHour;
+			monthWage = monthWage + dailyWage;
+			System.out.println("wage of day "+i+" is:"+dailyWage);
 		}
-		else if(check == 2){
-			workHour = 4;
-		}
-		else{
-			workHour = 0;
-		}
-		int dailyWage = workHour * wagePerHour;
-		System.out.println("Daily wage is:"+dailyWage);
+		System.out.println("Total Month wage is:"+monthWage);
 	}
 }

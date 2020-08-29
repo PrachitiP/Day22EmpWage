@@ -1,4 +1,4 @@
-//UseCase 6=>Loop till condition
+//UseCase 7=> Refactor code to compute Employee Wage
 
 class Empwage {
 
@@ -8,7 +8,7 @@ class Empwage {
 	public static final int workDayPerMonth = 20;
 	public static final int workHourPerMonth = 100;
 	
-	public static void main(String[] args){
+	public void computeWage(){
 	
 		int workHour = 0;
 		int monthWage = 0;
@@ -36,5 +36,10 @@ class Empwage {
 			System.out.println("wage of day "+workDay+" is:"+dailyWage);
 		}
 		System.out.println("Total Month wage is:"+monthWage);
+	}
+	public static void main(String[] args){
+	
+		EmpWageComputation obj = new EmpWageComputation();
+		obj.computeWage();
 	}
 }
